@@ -1,0 +1,9 @@
+node_modules
+dist
+__pycache__
+*.db
+venv
+.DS_Store
+make_mp4
+make_mp4.m
+make_mp4.swift

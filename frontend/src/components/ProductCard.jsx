@@ -10,7 +10,8 @@ export default function ProductCard({
 }) {
   const [isHovered, setIsHovered] = useState(false);
 
-  const displayImage = (isHovered && product.hover_image) ? product.hover_image : (product.image_url || product.image);
+  const rawImg = (isHovered && product.hover_image) ? product.hover_image : (product.image_url || product.image);
+  const displayImage = (rawImg && rawImg.startsWith('/')) ? `.${rawImg}` : rawImg;
   const discountPercent = product.discount_percent || (product.mrp > product.price ? Math.round((1 - product.price / product.mrp) * 100) : 0);
   const mrpVal = product.mrp || Math.round(product.price * 2.5);
 

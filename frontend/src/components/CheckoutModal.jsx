@@ -401,7 +401,7 @@ Thank you for choosing *RIDDHI CREATIONS — SURAT HANDLOOM COUTURE*!`;
             <div className="bg-white p-4 border border-[#E7E1D9] max-w-xs mx-auto shadow-md rounded-lg space-y-3">
               <div className="overflow-hidden rounded-md border border-stone-200 bg-[#F8F9FA]">
                 <img 
-                  src="/upi_qr_code.png" 
+                  src="./upi_qr_code.png" 
                   alt="Riddhi Collection UPI QR Code" 
                   className="w-full h-auto object-contain max-h-[300px] mx-auto"
                 />

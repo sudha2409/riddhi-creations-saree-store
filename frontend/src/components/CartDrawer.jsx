@@ -11,35 +11,11 @@ export default function CartDrawer({
 }) {
   if (!isOpen) return null;
 
-  const [coupon, setCoupon] = useState('');
-  const [discountPercent, setDiscountPercent] = useState(0);
-  const [couponError, setCouponError] = useState('');
-  const [couponSuccess, setCouponSuccess] = useState('');
-
   const subtotal = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
-  const discountAmount = (subtotal * discountPercent) / 100;
-  const finalTotal = subtotal - discountAmount;
   
   const freeShippingThreshold = 3000;
   const freeShippingLeft = Math.max(0, freeShippingThreshold - subtotal);
   const freeShippingProgress = Math.min(100, (subtotal / freeShippingThreshold) * 100);
-
-  const handleApplyCoupon = (e) => {
-    e.preventDefault();
-    setCouponError('');
-    setCouponSuccess('');
-    
-    const code = coupon.trim().toUpperCase();
-    if (code === 'RIDDHI10' || code === 'ROYAL10') {
-      setDiscountPercent(10);
-      setCouponSuccess(`Promo Code ${code} Applied! Saved 10%`);
-    } else if (code === 'BRIDAL15') {
-      setDiscountPercent(15);
-      setCouponSuccess('Promo Code BRIDAL15 Applied! Saved 15%');
-    } else {
-      setCouponError('Invalid Coupon Code. Try RIDDHI10');
-    }
-  };
 
   return (
     <div className="fixed inset-0 z-50 overflow-hidden bg-obsidian/70 backdrop-blur-sm flex justify-end">
@@ -82,37 +58,41 @@ export default function CartDrawer({
               </button>
             </div>
           ) : (
-            cartItems.map((item) => (
-              <div key={item.id} className="flex gap-4 p-3 bg-white border border-subtle relative group">
-                <img src={item.image_url} alt={item.name} className="w-20 h-24 object-cover border border-subtle shrink-0" />
-                <div className="flex-1 flex flex-col justify-between text-left">
-                  <div>
-                    <h4 className="font-serif font-normal text-sm text-obsidian line-clamp-1 tracking-wide">{item.name}</h4>
-                    <span className="text-[9px] text-champagne-600 font-medium uppercase tracking-widest">{item.category}</span>
-                    <div className="font-serif font-medium text-obsidian text-sm mt-1">
-                      ₹{item.price.toLocaleString('en-IN')}
-                    </div>
-                  </div>
-
-                  {/* Quantity Controls */}
-                  <div className="flex items-center justify-between pt-2">
-                    <div className="flex items-center border border-subtle bg-canvas">
-                      <button onClick={() => onUpdateQuantity(item.id, item.quantity - 1)} className="p-1 text-obsidian hover:text-champagne-600">
-                        <Minus className="w-3.5 h-3.5" />
-                      </button>
-                      <span className="px-3 text-xs font-medium text-obsidian">{item.quantity}</span>
-                      <button onClick={() => onUpdateQuantity(item.id, item.quantity + 1)} className="p-1 text-obsidian hover:text-champagne-600">
-                        <Plus className="w-3.5 h-3.5" />
-                      </button>
+            cartItems.map((item) => {
+              const img = item.image_url || item.image;
+              const displayImg = img && img.startsWith('/') ? `.${img}` : img;
+              return (
+                <div key={item.id} className="flex gap-4 p-3 bg-white border border-subtle relative group">
+                  <img src={displayImg} alt={item.name} className="w-20 h-24 object-cover border border-subtle shrink-0" />
+                  <div className="flex-1 flex flex-col justify-between text-left">
+                    <div>
+                      <h4 className="font-serif font-normal text-sm text-obsidian line-clamp-1 tracking-wide">{item.name}</h4>
+                      <span className="text-[9px] text-champagne-600 font-medium uppercase tracking-widest">{item.category}</span>
+                      <div className="font-serif font-medium text-obsidian text-sm mt-1">
+                        ₹{item.price.toLocaleString('en-IN')}
+                      </div>
                     </div>
 
-                    <button onClick={() => onRemoveItem(item.id)} className="text-stone-400 hover:text-obsidian text-xs flex items-center gap-1 font-light">
-                      <Trash2 className="w-3.5 h-3.5" />
-                    </button>
+                    {/* Quantity Controls */}
+                    <div className="flex items-center justify-between pt-2">
+                      <div className="flex items-center border border-subtle bg-canvas">
+                        <button onClick={() => onUpdateQuantity(item.id, item.quantity - 1)} className="p-1 text-obsidian hover:text-champagne-600">
+                          <Minus className="w-3.5 h-3.5" />
+                        </button>
+                        <span className="px-3 text-xs font-medium text-obsidian">{item.quantity}</span>
+                        <button onClick={() => onUpdateQuantity(item.id, item.quantity + 1)} className="p-1 text-obsidian hover:text-champagne-600">
+                          <Plus className="w-3.5 h-3.5" />
+                        </button>
+                      </div>
+
+                      <button onClick={() => onRemoveItem(item.id)} className="text-stone-400 hover:text-obsidian text-xs flex items-center gap-1 font-light">
+                        <Trash2 className="w-3.5 h-3.5" />
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))
+              );
+            })
           )}
         </div>
 
@@ -156,4 +136,3 @@ export default function CartDrawer({
     </div>
   );
 }
-

@@ -44,44 +44,48 @@ export default function WishlistDrawer({
               </button>
             </div>
           ) : (
-            wishlistProducts.map((item) => (
-              <div key={item.id} className="flex gap-4 p-3.5 bg-white border border-[#E7E1D9] relative group shadow-xs">
-                <img 
-                  src={item.image_url || item.image} 
-                  alt={item.name} 
-                  className="w-20 h-26 object-cover border border-stone-200 shrink-0" 
-                />
-                <div className="flex-1 flex flex-col justify-between text-left">
-                  <div>
-                    <h4 className="font-sans font-normal text-xs sm:text-sm text-[#171717] line-clamp-2 leading-snug">{item.name}</h4>
-                    <div className="font-sans font-bold text-[#171717] text-sm mt-1.5">
-                      ₹{item.price.toLocaleString('en-IN')}
+            wishlistProducts.map((item) => {
+              const rawImg = item.image_url || item.image;
+              const displayImg = rawImg && rawImg.startsWith('/') ? `.${rawImg}` : rawImg;
+              return (
+                <div key={item.id} className="flex gap-4 p-3.5 bg-white border border-[#E7E1D9] relative group shadow-xs">
+                  <img 
+                    src={displayImg} 
+                    alt={item.name} 
+                    className="w-20 h-26 object-cover border border-stone-200 shrink-0" 
+                  />
+                  <div className="flex-1 flex flex-col justify-between text-left">
+                    <div>
+                      <h4 className="font-sans font-normal text-xs sm:text-sm text-[#171717] line-clamp-2 leading-snug">{item.name}</h4>
+                      <div className="font-sans font-bold text-[#171717] text-sm mt-1.5">
+                        ₹{item.price.toLocaleString('en-IN')}
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-2 pt-2 border-t border-stone-100">
+                      <button
+                        onClick={() => {
+                          onAddToCart(item);
+                          onRemoveFromWishlist(item);
+                        }}
+                        className="bg-[#171717] text-[#FAF8F4] hover:bg-[#7A1F2B] text-[10px] uppercase font-serif tracking-wider px-3 py-1.5 flex items-center gap-1 transition-colors"
+                      >
+                        <ShoppingBag className="w-3 h-3" />
+                        <span>Move to Bag</span>
+                      </button>
+
+                      <button
+                        onClick={() => onRemoveFromWishlist(item)}
+                        className="text-stone-400 hover:text-red-600 p-1 text-xs"
+                        title="Remove from wishlist"
+                      >
+                        <Trash2 className="w-3.5 h-3.5" />
+                      </button>
                     </div>
                   </div>
-
-                  <div className="flex items-center gap-2 pt-2 border-t border-stone-100">
-                    <button
-                      onClick={() => {
-                        onAddToCart(item);
-                        onRemoveFromWishlist(item);
-                      }}
-                      className="bg-[#171717] text-[#FAF8F4] hover:bg-[#7A1F2B] text-[10px] uppercase font-serif tracking-wider px-3 py-1.5 flex items-center gap-1 transition-colors"
-                    >
-                      <ShoppingBag className="w-3 h-3" />
-                      <span>Move to Bag</span>
-                    </button>
-
-                    <button
-                      onClick={() => onRemoveFromWishlist(item)}
-                      className="text-stone-400 hover:text-red-600 p-1 text-xs"
-                      title="Remove from wishlist"
-                    >
-                      <Trash2 className="w-3.5 h-3.5" />
-                    </button>
-                  </div>
                 </div>
-              </div>
-            ))
+              );
+            })
           )}
         </div>
 

@@ -12,9 +12,10 @@ export default function ProductModal({
 }) {
   if (!product) return null;
 
-  const gallery = product.gallery && product.gallery.length > 0 
+  const norm = (url) => (url && url.startsWith('/') ? `.${url}` : url);
+  const gallery = (product.gallery && product.gallery.length > 0 
     ? product.gallery 
-    : [product.image_url || product.image];
+    : [product.image_url || product.image]).map(norm);
 
   // Fill gallery up to at least 4 images for the 2x2 PDP grid feel
   const displayGallery = gallery.length >= 4 

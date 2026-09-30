@@ -10,7 +10,7 @@ export default function BrandStory({ onReadStory }) {
           {/* Left Large Imagery */}
           <div className="relative aspect-[4/5] overflow-hidden border border-subtle">
             <img
-              src="/moss_saree_pink.jpg"
+              src="./moss_saree_pink.jpg"
               alt="Surat Handloom Couture"
               className="w-full h-full object-cover object-center"
             />

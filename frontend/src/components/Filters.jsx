@@ -45,7 +45,7 @@ export default function Filters({
   };
 
   return (
-    <aside className="w-full lg:w-64 bg-white p-5 border border-stone-200 space-y-4 self-start sticky top-28 text-left shadow-2xs">
+    <aside className="hidden lg:block lg:w-64 bg-white p-5 border border-stone-200 space-y-4 self-start sticky top-28 text-left shadow-2xs">
       
       {/* Libas Filter Header */}
       <div className="flex items-center justify-between border-b border-stone-200 pb-3">

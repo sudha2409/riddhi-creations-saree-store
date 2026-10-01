@@ -92,8 +92,8 @@ export default function HeroBanner({ onSelectCategory }) {
       </div>
 
       {/* Trust & Craftsmanship Bar */}
-      <div className="bg-canvas border-b border-subtle py-4.5 px-6 text-charcoal">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-[11px] font-light tracking-[0.2em] uppercase">
+      <div className="bg-canvas border-b border-subtle py-3 sm:py-4 px-3 sm:px-6 text-charcoal">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 text-center text-[9px] sm:text-[11px] font-light tracking-[0.1em] sm:tracking-[0.2em] uppercase">
           <div className="flex items-center justify-center gap-2">
             <Award className="w-3.5 h-3.5 text-gold stroke-1 shrink-0" />
             <span>100% CERTIFIED HANDLOOM</span>

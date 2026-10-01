@@ -48,7 +48,7 @@ export default function ProductCard({
       </div>
 
       {/* 2. PRODUCT INFORMATION AREA */}
-      <div className="p-3.5 flex flex-col justify-between flex-1 bg-white space-y-1.5">
+      <div className="p-2.5 sm:p-3.5 flex flex-col justify-between flex-1 bg-white space-y-1.5">
         {/* Saree Name */}
         <h3 className="font-sans font-normal text-stone-800 text-xs sm:text-sm line-clamp-2 hover:text-[#7A1F2B] transition-colors leading-snug tracking-wide">
           {product.name}

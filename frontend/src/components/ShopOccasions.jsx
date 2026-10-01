@@ -18,7 +18,7 @@ export default function ShopOccasions({ onSelectOccasion }) {
         </div>
 
         {/* 6-Tile Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-5">
           {mockOccasions.map((occ) => (
             <div
               key={occ.id}

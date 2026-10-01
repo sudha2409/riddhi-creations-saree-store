@@ -306,9 +306,9 @@ export default function App() {
                 </div>
               )}
 
-              {/* Product Grid (3 Per Row Desktop / 2 Per Row Mobile - Libas Style) */}
+              {/* Product Grid (2 Per Row Mobile / 3 Tablet / 4 Widescreen Desktop) */}
               {loading ? (
-                <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 py-8">
+                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6 py-8">
                   {[1, 2, 3, 4, 5, 6].map(n => (
                     <div key={n} className="bg-stone-200/50 animate-pulse aspect-[3/4] border border-stone-200" />
                   ))}
@@ -323,7 +323,7 @@ export default function App() {
                   </button>
                 </div>
               ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
                   {products.map((p) => (
                     <ProductCard
                       key={p.id}

@@ -17,8 +17,8 @@ export default function ShopCollections({ onSelectCategory }) {
           <div className="w-12 h-[1px] bg-wine mx-auto mt-3" />
         </div>
 
-        {/* 5-Column / Grid Editorial Tiles */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        {/* 2-Column Mobile / 5-Column Desktop Editorial Tiles */}
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-6">
           {mockCollections.map((col) => (
             <div
               key={col.id}

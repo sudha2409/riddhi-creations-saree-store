@@ -35,7 +35,7 @@ export default function BrandStory({ onReadStory }) {
             </p>
 
             <p className="text-xs sm:text-sm text-stone-600 font-light leading-relaxed tracking-wide">
-              Riddhi Collection brings together the artistry of Surat handloom with a contemporary sense of luxury. Featuring intricate golden zari borders, traditional bandhani prints, and rich running blouse pieces, every saree in our atelier is hand-inspected in Surat for its authenticity, drape, and fast vibrant colours.
+              Riddhi Creations brings together the artistry of Surat handloom with a contemporary sense of luxury. Featuring intricate golden zari borders, traditional bandhani prints, and rich running blouse pieces, every saree in our atelier is hand-inspected in Surat for its authenticity, drape, and fast vibrant colours.
             </p>
 
             <div className="pt-4">

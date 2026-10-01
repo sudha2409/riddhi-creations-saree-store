@@ -16,7 +16,7 @@ export default function InstagramFeed() {
             FOLLOW THE RIDDHI EDIT
           </h2>
           <span className="text-xs tracking-[0.25em] font-light text-muted uppercase block">
-            @RIDDHICOLLECTION
+            @riddhicreation_surat
           </span>
           <div className="w-12 h-[1px] bg-wine mx-auto mt-3" />
         </div>
@@ -26,14 +26,14 @@ export default function InstagramFeed() {
           {mockInstagramImages.map((item) => (
             <a
               key={item.id}
-              href="https://instagram.com"
+              href="https://www.instagram.com/riddhicreation_surat/"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative aspect-square overflow-hidden border border-subtle bg-canvas block"
             >
               <img
                 src={item.image}
-                alt="Riddhi Collection Editorial"
+                alt="Riddhi Creations Editorial"
                 className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
               />
               

@@ -184,18 +184,18 @@ export const mockInstagramImages = [
     id: "ig-1",
     image: "./moss_saree_pink.jpg",
     likes: "2.4k",
-    tag: "@RIDDHICOLLECTION"
+    tag: "@riddhicreation_surat"
   },
   {
     id: "ig-2",
     image: "./dola_silk_blue.jpg",
     likes: "1.8k",
-    tag: "@RIDDHICOLLECTION"
+    tag: "@riddhicreation_surat"
   },
   {
     id: "ig-3",
     image: "./moss_saree_pink.jpg",
     likes: "3.1k",
-    tag: "@RIDDHICOLLECTION"
+    tag: "@riddhicreation_surat"
   }
 ];

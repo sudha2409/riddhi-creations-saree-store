@@ -100,7 +100,7 @@ export default function AdminPortal({ isOpen, onClose }) {
         <div className="flex items-center justify-between border-b border-subtle pb-4 mb-4">
           <div>
             <h2 className="font-serif font-normal text-2xl text-obsidian tracking-wider uppercase">
-              Riddhi Collection Admin Portal
+              Riddhi Creations Admin Portal
             </h2>
             <p className="text-xs text-muted font-light tracking-wide">Live Customer Orders & Bulk Catalog Import</p>
           </div>
@@ -265,7 +265,7 @@ export default function AdminPortal({ isOpen, onClose }) {
               className="w-full bg-obsidian text-canvas py-3.5 font-serif text-xs uppercase tracking-[0.2em] hover:bg-champagne-500 hover:text-obsidian transition-colors disabled:opacity-50 flex items-center justify-center gap-2 shadow-md border border-champagne-500/30"
             >
               <Upload className="w-4 h-4" />
-              {importing ? 'Importing Products...' : 'Execute Import to Riddhi Collection'}
+              {importing ? 'Importing Products...' : 'Execute Import to Riddhi Creations'}
             </button>
           </div>
         )}

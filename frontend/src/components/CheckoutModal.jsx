@@ -255,7 +255,7 @@ Thank you for choosing *RIDDHI CREATIONS — SURAT HANDLOOM COUTURE*!`;
                     type="text"
                     name="customer_name"
                     required
-                    placeholder="e.g. Sudha"
+                    placeholder="Enter your Full Name"
                     value={formData.customer_name}
                     onChange={handleChange}
                     className="w-full px-3.5 py-2.5 text-xs bg-white border border-[#E7E1D9] focus:outline-none focus:border-[#171717] text-[#171717]"
@@ -268,7 +268,7 @@ Thank you for choosing *RIDDHI CREATIONS — SURAT HANDLOOM COUTURE*!`;
                     type="tel"
                     name="customer_phone"
                     required
-                    placeholder="e.g. 8770275989"
+                    placeholder="10-digit Mobile Number"
                     value={formData.customer_phone}
                     onChange={handleChange}
                     className="w-full px-3.5 py-2.5 text-xs bg-white border border-[#E7E1D9] focus:outline-none focus:border-[#171717] text-[#171717]"
@@ -281,7 +281,7 @@ Thank you for choosing *RIDDHI CREATIONS — SURAT HANDLOOM COUTURE*!`;
                 <input
                   type="email"
                   name="customer_email"
-                  placeholder="sudhalohani1@gmail.com"
+                  placeholder="yourname@example.com"
                   value={formData.customer_email}
                   onChange={handleChange}
                   className="w-full px-3.5 py-2.5 text-xs bg-white border border-[#E7E1D9] focus:outline-none focus:border-[#171717] text-[#171717]"
@@ -294,7 +294,7 @@ Thank you for choosing *RIDDHI CREATIONS — SURAT HANDLOOM COUTURE*!`;
                   name="shipping_address"
                   required
                   rows={2}
-                  placeholder="House No, Street Name, Landmark"
+                  placeholder="House No, Building, Street Name, Landmark"
                   value={formData.shipping_address}
                   onChange={handleChange}
                   className="w-full px-3.5 py-2.5 text-xs bg-white border border-[#E7E1D9] focus:outline-none focus:border-[#171717] text-[#171717]"
@@ -308,7 +308,7 @@ Thank you for choosing *RIDDHI CREATIONS — SURAT HANDLOOM COUTURE*!`;
                     type="text"
                     name="city"
                     required
-                    placeholder="e.g. Rajnandgaon"
+                    placeholder="City / Town"
                     value={formData.city}
                     onChange={handleChange}
                     className="w-full px-3.5 py-2.5 text-xs bg-white border border-[#E7E1D9] focus:outline-none focus:border-[#171717] text-[#171717]"
@@ -322,7 +322,7 @@ Thank you for choosing *RIDDHI CREATIONS — SURAT HANDLOOM COUTURE*!`;
                     name="pincode"
                     required
                     maxLength={6}
-                    placeholder="e.g. 491441"
+                    placeholder="6-digit Pincode"
                     value={formData.pincode}
                     onChange={handleChange}
                     className="w-full px-3.5 py-2.5 text-xs bg-white border border-[#E7E1D9] focus:outline-none focus:border-[#171717] text-[#171717]"
@@ -402,7 +402,7 @@ Thank you for choosing *RIDDHI CREATIONS — SURAT HANDLOOM COUTURE*!`;
               <div className="overflow-hidden rounded-md border border-stone-200 bg-[#F8F9FA]">
                 <img 
                   src="./upi_qr_code.png" 
-                  alt="Riddhi Collection UPI QR Code" 
+                  alt="Riddhi Creations UPI QR Code" 
                   className="w-full h-auto object-contain max-h-[300px] mx-auto"
                 />
               </div>

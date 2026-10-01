@@ -124,7 +124,7 @@ export default function Footer({ onSelectCategory }) {
           <div className="space-y-4">
             <h4 className="text-[11px] font-normal uppercase tracking-[0.2em] text-[#FAF8F4]">CONNECT</h4>
             <ul className="space-y-2.5 text-[#A39E93] font-light">
-              <li><a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-[#FAF8F4] transition-colors">Instagram</a></li>
+              <li><a href="https://www.instagram.com/riddhicreation_surat/" target="_blank" rel="noreferrer" className="hover:text-[#FAF8F4] transition-colors">Instagram</a></li>
               <li><a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-[#FAF8F4] transition-colors">Facebook</a></li>
               <li><a href="https://pinterest.com" target="_blank" rel="noreferrer" className="hover:text-[#FAF8F4] transition-colors">Pinterest</a></li>
               <li><a href="https://wa.me/918770275989" target="_blank" rel="noreferrer" className="hover:text-[#FAF8F4] transition-colors">WhatsApp Concierge</a></li>
@@ -206,7 +206,7 @@ export default function Footer({ onSelectCategory }) {
             </button>
             {openAccordion.connect && (
               <ul className="pt-3 space-y-2 text-[#A39E93] pl-2">
-                <li><a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-[#FAF8F4]">Instagram</a></li>
+                <li><a href="https://www.instagram.com/riddhicreation_surat/" target="_blank" rel="noreferrer" className="hover:text-[#FAF8F4]">Instagram</a></li>
                 <li><a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-[#FAF8F4]">Facebook</a></li>
                 <li><a href="https://pinterest.com" target="_blank" rel="noreferrer" className="hover:text-[#FAF8F4]">Pinterest</a></li>
                 <li><a href="https://wa.me/918770275989" target="_blank" rel="noreferrer" className="hover:text-[#FAF8F4]">WhatsApp Concierge</a></li>
@@ -223,12 +223,12 @@ export default function Footer({ onSelectCategory }) {
               FOLLOW THE RIDDHI EDIT
             </span>
             <a 
-              href="https://instagram.com" 
+              href="https://www.instagram.com/riddhicreation_surat/" 
               target="_blank" 
               rel="noreferrer" 
               className="font-serif text-sm sm:text-base tracking-[0.25em] text-[#FAF8F4] hover:text-[#B5924E] transition-colors block"
             >
-              @RIDDHICOLLECTION
+              @riddhicreation_surat
             </a>
           </div>
 
@@ -238,7 +238,7 @@ export default function Footer({ onSelectCategory }) {
               <div key={item.id} className="relative aspect-square overflow-hidden bg-[#242120] group cursor-pointer">
                 <img 
                   src={item.image} 
-                  alt="Riddhi Couture Edit" 
+                  alt="Riddhi Creations Edit" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-80 group-hover:opacity-100"
                 />
               </div>
